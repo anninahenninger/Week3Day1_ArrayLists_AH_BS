@@ -3,7 +3,7 @@ package Advanced_A3;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class City {
+public class City implements Comparable<City>{
 
     String name;
     int citizensNum;
@@ -20,4 +20,11 @@ public class City {
     public int getCitizensNum() {
         return this.citizensNum;
     }
+
+    
+    @Override
+    public int compareTo(City o){
+        return this.name.compareTo(o.name);
+    }
+
 }

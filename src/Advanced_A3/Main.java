@@ -42,6 +42,9 @@ public class Main {
         //ac.printTotalNumberOfCitizens();
 
         //ac.compareNames("ascending");
-        ac.compareCitizens("ascending");
+        //ac.compareCitizens("ascending");
+
+        Collections.sort(capitals);
+        capitals.forEach(city -> System.out.println(city.name));
     }
 }
