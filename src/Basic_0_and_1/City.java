@@ -1,4 +1,4 @@
-package Basic_0;
+package Basic_0_and_1;
 
 public class City {
     String city;
