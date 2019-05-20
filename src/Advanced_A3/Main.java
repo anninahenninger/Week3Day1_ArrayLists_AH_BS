@@ -1,6 +1,8 @@
 package Advanced_A3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Main {
         City Klagenfurt = new City("Klagenfurt", 94000);
         City Linz = new City("Linz", 192000);
         City Salzburg = new City("Salzburg", 146000);
-        City Innsbruck = new City("Innsbruck", 12000);
+        City Innsbruck = new City("Innsbruck", 122000);
         City Bregenz = new City("Bregenz", 28000);
 
         ArrayList<City> capitals = new ArrayList<>();
@@ -35,8 +37,11 @@ public class Main {
 
         AustrianCities ac = new AustrianCities(capitals);
         //ac.printCityNames();
-        ac.printCityCitizenNumbers();
+        //ac.printCityCitizenNumbers();
         //ac.printAllCityData();
         //ac.printTotalNumberOfCitizens();
+
+        //ac.compareNames("ascending");
+        ac.compareCitizens("ascending");
     }
 }

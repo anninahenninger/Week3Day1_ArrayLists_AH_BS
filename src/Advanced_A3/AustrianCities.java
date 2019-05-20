@@ -35,4 +35,60 @@ public class AustrianCities{
         }
         System.out.println("TOTAL " + total);
     }
+
+    public void compareNames(String direction){
+        if(direction.equals("ascending")){
+            Collections.sort(capitals, new Comparator<City>() {
+                @Override
+                public int compare(City o1, City o2) {
+                    return o1.name.compareTo(o2.name);
+                }
+            });
+            System.out.println("SORT NAME ASCENDING");
+            for(int i = 0; i < capitals.size(); i++){
+                System.out.println("City name: " + capitals.get(i).name + " " + capitals.get(i).citizensNum);
+            }
+        } else if (direction.equals("descending")){
+            Collections.sort(capitals, new Comparator<City>() {
+                @Override
+                public int compare(City o1, City o2) {
+                    return -(o1.name.compareTo(o2.name));
+                }
+            });
+            System.out.println("SORT NAME DESCENDING");
+            for(int i = 0; i < capitals.size(); i++){
+                System.out.println("City name: " + capitals.get(i).name + " " + capitals.get(i).citizensNum);
+            }
+        } else {
+            System.out.println("Direction can only be ascending or descending!");
+        }
+    }
+
+    public void compareCitizens(String direction){
+        if(direction.equals("ascending")){
+            Collections.sort(capitals, new Comparator<City>() {
+                @Override
+                public int compare(City o1, City o2) {
+                    return Integer.valueOf(o1.citizensNum).compareTo(o2.citizensNum);
+                }
+            });
+            System.out.println("SORT CITIZENS ASCENDING");
+            for(int i = 0; i < capitals.size(); i++){
+                System.out.println("City name: " + capitals.get(i).name + " " + capitals.get(i).citizensNum);
+            }
+        } else if (direction.equals("descending")){
+            Collections.sort(capitals, new Comparator<City>() {
+                @Override
+                public int compare(City o1, City o2) {
+                    return -(Integer.valueOf(o1.citizensNum).compareTo(o2.citizensNum));
+                }
+            });
+            System.out.println("SORT CITIZENS DESCENDING");
+            for(int i = 0; i < capitals.size(); i++){
+                System.out.println("City name: " + capitals.get(i).name + " " + capitals.get(i).citizensNum);
+            }
+        } else {
+            System.out.println("Direction can only be ascending or descending!");
+        }
+    }
 }
