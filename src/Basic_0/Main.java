@@ -1,6 +1,6 @@
 package Basic_0;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Create a program to create a new array list, containing 6 String objects with names of Austrian cities and print out
@@ -31,6 +31,7 @@ public class Main {
         cities.add(s5);
         cities.add(s6);
 
+        /*
         for(String city : cities){
             System.out.println(city);
         }
@@ -70,6 +71,72 @@ public class Main {
 
         for(City ct : cityTemperature){
             System.out.println("The temperature in " + ct.city + " is " + ct.temperature + "°C");
+        }
+        */
+
+        //A1
+
+        Collections.sort(cities);
+
+        System.out.println("###################");
+        for(String city : cities){
+            System.out.println(city);
+        }
+
+        ArrayList<String> villages = new ArrayList<>();
+
+        String v1 = "Zwentendorf";
+        String v2 = "Deutsch-Wagram";
+        String v3 = "Lassee";
+        villages.add(v1);
+        villages.add(v2);
+        villages.add(v3);
+
+
+        for(String village : villages){
+            System.out.println(village);
+        }
+
+        villages.addAll(cities);
+        System.out.println("###################");
+        for(String village : villages){
+            System.out.println(village);
+        }
+
+        System.out.println("###################");
+        for(int i = 0; i < villages.size(); i++){
+            System.out.println(villages.get(i));
+        }
+
+        /*
+        System.out.println("###################");
+        if(villages.isEmpty()){
+            System.out.println("Array is empty");
+        } else {
+            System.out.println("Array is not empty");
+        }
+        */
+
+        /*
+        Collections.reverse(villages);
+        System.out.println("###################");
+        for(String reverseVillages : villages){
+            System.out.println(reverseVillages);
+        }
+         */
+
+        /*
+        villages.removeIf(h -> (h.equals("Lassee")));
+        System.out.println("###################");
+        for(String reverseVillages : villages){
+            System.out.println(reverseVillages);
+        }
+        */
+
+        villages.add(1, "Gänserndorf");
+        System.out.println("###################");
+        for(int i = 0; i < villages.size(); i++){
+            System.out.println(villages.get(i));
         }
     }
 }
